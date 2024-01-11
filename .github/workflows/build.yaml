@@ -34,6 +34,10 @@ jobs:
         
       - name: Install dependencies
         run: pnpm install
+
+      - name: Install Alsa sound dependencies
+        if: runner.os == 'Linux'
+        run: sudo apt-get install libasound2-dev
       
       - name: Copy Env
         run: cp .env.example .env
