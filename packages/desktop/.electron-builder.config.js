@@ -75,14 +75,13 @@ module.exports = {
   },
   linux: {
     target: [
-      // {
-      //   target: 'deb',
-      //   arch: [
-      //     'x64',
-      //     'arm64',
-      //     // 'armv7l'
-      //   ],
-      // },
+      {
+        target: 'deb',
+        arch: [
+          'x64',
+          'arm64',
+        ],
+      },
       {
         target: 'AppImage',
         arch: ['x64'],
