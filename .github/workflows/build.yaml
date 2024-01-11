@@ -28,16 +28,16 @@ jobs:
         with:
           node-version: 18.12.1
           cache: 'pnpm'
+
+      - name: Install Alsa sound dependencies
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install libasound2-dev
           
       - name: Install global dependencies
         run: npm i prisma fastify-cli turbo tsx electron-builder@23.6.0 -g 
         
       - name: Install dependencies
         run: pnpm install
-
-      - name: Install Alsa sound dependencies
-        if: runner.os == 'Linux'
-        run: sudo apt-get install libasound2-dev
       
       - name: Copy Env
         run: cp .env.example .env
