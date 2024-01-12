@@ -79,6 +79,7 @@ module.exports = {
         target: 'deb',
         arch: [
           'x64',
+          'arm64',
         ],
       },
       {
@@ -102,7 +103,7 @@ module.exports = {
       //   arch: ['x64'],
       // },
     ],
-    artifactName: '${productName}-${version}-${os}.${ext}',
+    artifactName: '${productName}-${version}-${os}-${arch}.${ext}',
     category: 'Music',
     icon: './build/icon.png',
   },
