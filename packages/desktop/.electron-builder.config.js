@@ -79,7 +79,6 @@ module.exports = {
         target: 'deb',
         arch: [
           'x64',
-          'arm64',
         ],
       },
       {
