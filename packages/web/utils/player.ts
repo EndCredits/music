@@ -367,6 +367,7 @@ export class Player {
       autoplay,
       volume: 1,
       onend: () => {
+        howler.unload()
         this._howlerOnEndCallback()
       },
     })
